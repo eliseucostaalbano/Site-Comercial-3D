@@ -1,4 +1,4 @@
-import Hero from "./components/Hero"
+import Hero from "./components/Hero.jsx"
 import NavBar from "./components/NavBar"
 import Showcase from "./components/Showcase"
 import VisaoProduto from "./components/Visaoproduto"
