@@ -8,7 +8,7 @@ const Footer = () => {
           Mais jeito de compar: Vá a uma Apple Store ou outro vendedor perto de
           você. Ou ligue 000800 040 1966.
         </p>
-        <img src="/logo.svg" alt="Apple logo mr-4" />
+        <img src="/logo.svg" alt="Apple logo"/>
       </div>
 
       <hr />

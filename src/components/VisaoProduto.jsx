@@ -1,17 +1,18 @@
 import { Canvas } from "@react-three/fiber";
 import useMacbookLoja from "../loja";
 import clsx from "clsx";
+import LuzStudio from "./three/LuzStudio";
+import {useMediaQuery} from "react-responsive";
+import ModelSwitcher from "./three/ModelSwitcher";
 
 const VisaoProduto = () => {
   const { color, scale, setColor, setScale } = useMacbookLoja();
+  const isMobile = useMediaQuery({ query: '(max-width: 1024px)'});
 
   return (
-    <section id="product-viewer">
+    <section id="product-viewer" >
       <h2>Veja de Perto</h2>
       <div className="controls">
-        <p className="info">
-          Macbook Pro | Diponivel em 14" & 16" in Space Gray & Cores Escuras
-        </p>
         <div className="flex-center gap-5 mt-5">
           <div className="color-control">
             <div onClick={() => setColor("#adb5bd")}
@@ -36,7 +37,9 @@ const VisaoProduto = () => {
         </div>
       </div>
       <Canvas id="canvas" camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100}}>
-      
+     <LuzStudio />
+       
+       <ModelSwitcher scale={isMobile ? scale - 0.03 : scale} isMobile={isMobile} />
       </Canvas>
     </section>
   );

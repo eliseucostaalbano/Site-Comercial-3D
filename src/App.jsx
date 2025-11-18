@@ -1,15 +1,18 @@
 import Hero from "./components/Hero.jsx"
 import NavBar from "./components/NavBar"
 import Showcase from "./components/Showcase"
-import VisaoProduto from "./components/Visaoproduto"
+import VisaoProduto from "./components/VisaoProduto"
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/all";
 import Performace from "./components/Performace"
 import Features from "./components/Features"
 import Highlights from "./components/Highlights";
 import Footer from "./components/Footer"
 
-function App() {
+gsap.registerPlugin(ScrollTrigger)
 
-  return (
+function App() {
+ return (
     <main>
       <NavBar />
       <Hero />
